@@ -4,7 +4,9 @@
 
 This scripts bring the methodological steps for my paper: "Immigration and the context of Brexit: Collocate Network and Multidimensional Frameworks applied to Appraisal in SFL"
 
-The paper is still in peer-review processes and the reference will be posted here soon as it is published. Unfortunately, due to the ethical issues, data cannot be provided in this repository. Please, drop me a line if any doubt pops up.
+The paper is still in peer-review processes and the reference will be posted here soon as it is published. Unfortunately, due to the ethical issues, data cannot be provided in this repository.
+
+Please, drop me a line if any doubt pops up.
 
 # Thank you note
 
@@ -20,9 +22,30 @@ The understanding of such choices would contribute to the analysis of roles they
 
 After this initial analysis, the texts underwent semi-automatic tagging using the categories elicited in the cluster analysis. The tagged text was the basis for the factorial analysis of the appraisal system in the 98 texts collected. The lexicogrammatical choices congregated into dimensions which would represent their positive (and negative) co-occurrence within the texts. The factor analysis was also the basis for profiling each newspaper in terms of the appraisal meanings they actualise.
 
-## Network analysis of Lexis
+# Data scraping
 
-![](pictures/fig01.png)
+Data was scraped using a couple of R packages, all responsible for downloading the data and cleaning the articles:
+
+1.  purrr
+2.  xml2
+3.  rvest
+
+A fourth package was reponsible for reading the csv files for data processing:
+
+-   readr
+
+These procedures will be covered by three `R` files:
+
+1.  **Downloading** (`Data_Scrap.R`): Functions for downloading the articles form web.
+2.  **Cleaning** (`Cleaning.R`):Functions for pre-processing and cleaning text data.
+
+# Network analysis of Lexis
+
+<p align="center">
+
+<img src="./pictures/fig01.png" width="300" height="455"/>
+
+</p>
 
 The image Click on *select file* and choose the texts. In this study I have chosen to use a file for each newspaper, so I could analyse them separately.
 
@@ -106,6 +129,90 @@ Please, note that the Key (legend) was added using Adobe Illustrator. Each colou
 
 The next step was to tag the corpus in order to enable factor analysis. Three R packages we used for this task:
 
-1.  `RQDA`: It is a package for qualitative data analysis. It integrates qualitative coding with various R programming features.[Available here](http://rqda.r-forge.r-project.org/)
-2.  `Psych`: A set of tools for Psychology and Human Sciences Statistics [Available here](https://personality-project.org/r/psych/)
+1.  `RQDA`: It is a package for qualitative data analysis. It integrates qualitative coding with various R programming features.[Available here](http://rqda.r-forge.r-project.org/ "RQDA")
+2.  `Psych`: A set of tools for Psychology and Human Sciences Statistics [Available here](https://personality-project.org/r/psych/ "Psych")
 3.  `Quanteda`: It offers a set of tools intended to perform quantitative textual analysis. In this research, I used its KWIC feature to map the appraisal in the corpus. [Available here](https://quanteda.io/ "Quanteda")
+
+Each of this steps has an specific R script available at this repository:
+
+-   **Coding** (`Coding.R`): codes for each category in the project and how to apply it via command line in R.
+-   **Multidimensional** (`MultiAn.R`): codes and data treatment for factorial analysis.
+-   **Concordancing** (`Conc.R`): codes for condordancing.
+
+ 
+
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| **Category**                                                    | **What it means**                                | **Appraisal Function(s)** | **Examples**                                                     | **Tag** |
++=================================================================+==================================================+===========================+==================================================================+=========+
+| Adjectives - I (immigrants or immigration)                      | Immigrants' social and economic behaviour        | Judgment (social          | Bogus, Awful,                                                    | ADJ_I   |
+|                                                                 |                                                  | sanction)                 | Destitute, Dangerous                                             |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Propriety                 |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Affect                    |                                                                  |         |
+|                                                                 |                                                  | (negative)                |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Appreciation              |                                                                  |         |
+|                                                                 |                                                  | (negative)                |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Adjectives -- II (Immigrant skills)                             | Quality of professional skills                   | Judgment (social esteem)  | Unskilled migrants, low-skilled, skilled-worker, Brightest minds | ADJ_II  |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Capacity                  |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Adjectives -- III                                               | Whether immigration is legal or morally accepted | Judgment (social          | Legal, illegal,                                                  | ADJ_III |
+| (Legal status)                                                  |                                                  | sanction/esteem)          | unlawful                                                         |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Normality/propriety       |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Mixed categories - I (Noun phases, adjectives and prepositional | Where immigrants are from                        | Intensification (Focus)   | Ethnic minorities, Portugal, from Eastern Europe, from poorer EU | MC_I    |
+| phrases)                                                        |                                                  |                           | countries, Iran, Polish                                          |         |
+|                                                                 |                                                  | Sharpness                 |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Mixed categories                                                | How immigration (system) is                      | Judgment (social          | dramatically,                                                    | MC_III  |
+| - III (Adverbs and adjectives)                                  |                                                  | esteem)                   | passionately,                                                    |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Normality                 | absurd,                                                          |         |
+|                                                                 |                                                  |                           | uncontrolled                                                     |         |
+|                                                                 |                                                  | Appreciation              |                                                                  |         |
+|                                                                 |                                                  | (negative)                |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Mixed categories -- II (Proper nouns and noun phrases)          | Politicians and other entities voices for        | Heteroglossia             | Nigel Farage, Boris Johnson, say, Official statisticians         | MC_II   |
+|                                                                 | support                                          |                           |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Verb                                                            | Processes (with collocates) that withhold some   | Judgment (social          | Stop illegal                                                     | VP      |
+| phraseologies                                                   | evaluation                                       | esteem)                   | immigrants, squat, stow                                          |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Property                  |                                                                  |         |
+|                                                                 |                                                  | (immigration)             |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Capacity (government)     |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Heteroglossia             |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Modals                                                          | Modal verbs                                      | Heteroglossia             | May, Must, Can                                                   | Modal   |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Noun phrases -- I                                               | Evaluating economic processes                    | Intensification           | European                                                         | NP_I    |
+|                                                                 |                                                  | (focus)                   | economies, eurozone, economic refugees, welfare                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Sharpness                 |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Judgment (social          |                                                                  |         |
+|                                                                 |                                                  | esteem)                   |                                                                  |         |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Normality                 |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+| Noun phrases -- II                                              | Control over UK borders                          | Judgment (social esteem)  | student visas, proper border controls                            | NP_II   |
+|                                                                 |                                                  |                           |                                                                  |         |
+|                                                                 |                                                  | Normality (immigration)   |                                                                  |         |
++-----------------------------------------------------------------+--------------------------------------------------+---------------------------+------------------------------------------------------------------+---------+
+
+Table 7: Categories for
+Multidimensional analysis
+
+For further information regarding the categories and definitions, please refer to the paper. Here are some images ilustrating the results:
+
+![Relationship amongst strategies](pictures/fig06.png "Relationship amongst strategies")
+
+![Strategies correlation](pictures/fig07.png "Strategies correlation")
+
+![Dimensions and Newspapers](pictures/fig08.png "Dimensions and Newspapers")
