@@ -34,10 +34,7 @@ A fourth package was reponsible for reading the csv files for data processing:
 
 -   readr
 
-These procedures will be covered by three `R` files:
-
-1.  **Downloading** (`Data_Scrap.R`): Functions for downloading the articles form web.
-2.  **Cleaning** (`Cleaning.R`):Functions for pre-processing and cleaning text data.
+These procedures will be covered by a singe `R` file (`Data_Scr.R`). The file contains the functions for downloading the articles form web and pre-processing and cleaning text data.
 
 # Network analysis of Lexis
 
