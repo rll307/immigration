@@ -20,7 +20,7 @@ The understanding of such choices would contribute to the analysis of roles they
 
 After this initial analysis, the texts underwent semi-automatic tagging using the categories elicited in the cluster analysis. The tagged text was the basis for the factorial analysis of the appraisal system in the 98 texts collected. The lexicogrammatical choices congregated into dimensions which would represent their positive (and negative) co-occurrence within the texts. The factor analysis was also the basis for profiling each newspaper in terms of the appraisal meanings they actualise.
 
-## Network analysis of lexis
+## Network analysis of Lexis
 
 ![](pictures/fig01.png)
 
@@ -52,11 +52,11 @@ You should use the same parameters I used in the article
 
 -   I used a stopwords list for English language available at [Ranks NL Webmaster Tools](https://www.ranks.nl/stopwords).
 
-After we processes the files, COWO we will use another software [Vosviewer](http://www.vosviewer.com) as a *passage* to Gephi.
+After we processes the files, COWO we will use another software [VosViewer](http://www.vosviewer.com) as a *passage* to Gephi.
 
 Here are the instructions:
 
--   Go to [Vosviewer](http://www.vosviewer.com) and download it
+-   Go to [VosViewer](http://www.vosviewer.com) and download it
 
 -   Open VosViewer
 
@@ -69,7 +69,7 @@ Here are the instructions:
 
 -   Click next until the network show up.
 
-[Vosviewer](http://www.vosviewer.com) is a nice programme, but the options are not so good as they are in [Gephi](https://gephi.org/). This is the reason why we export the file as a **GraphML** or **GML** format to open it in Gephi.
+[VosViewer](http://www.vosviewer.com) is a nice programme, but the options are not so good as they are in [Gephi](https://gephi.org/). This is the reason why we export the file as a **GraphML** or **GML** format to open it in Gephi.
 
 After you exported the files, start Gephi. Click on open graph file (see image below) and open the network.
 
@@ -102,6 +102,10 @@ Finally, go to the preview tab, mark show labels and preview the network. It mig
 
 Please, note that the Key (legend) was added using Adobe Illustrator. Each colour would represent a cluster, the more centred words are more important in terms of co-occurrence.
 
-# Semi-automatic tagging and multidimensional analysis
+# Semi-automatic tagging, multidimensional analysis and concordancing
 
 The next step was to tag the corpus in order to enable factor analysis. Three R packages we used for this task:
+
+1.  `RQDA`: It is a package for qualitative data analysis. It integrates qualitative coding with various R programming features.[Available here](http://rqda.r-forge.r-project.org/)
+2.  `Psych`: A set of tools for Psychology and Human Sciences Statistics [Available here](https://personality-project.org/r/psych/)
+3.  `Quanteda`: It offers a set of tools intended to perform quantitative textual analysis. In this research, I used its KWIC feature to map the appraisal in the corpus. [Available here](https://quanteda.io/ "Quanteda")
