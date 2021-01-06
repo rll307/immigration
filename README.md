@@ -22,7 +22,7 @@ After this initial analysis, the texts underwent semi-automatic tagging using th
 
 ## Network analysis of lexis
 
-![](pictures/fig01.png){#fig1}
+![](pictures/fig01.png)
 
 The image Click on *select file* and choose the texts. In this study I have chosen to use a file for each newspaper, so I could analyse them separately.
 
@@ -32,9 +32,9 @@ The image Click on *select file* and choose the texts. In this study I have chos
 
 </p>
 
-You should use the same parametrers I used in the article
+You should use the same parameters I used in the article
 
--   Unmark td-idf option.
+-   Unselect td-idf option.
 
     -   This calculation tends to make more common words less relevant in the results.
 
@@ -48,9 +48,9 @@ You should use the same parametrers I used in the article
 
     -   It makes reading a lot easier
 
--   The minimum occurece of a word to be in my graph will be 3
+-   The minimum occurrence of a word to be in my graph will be 3
 
--   I used a stopword list for English language available at [Ranks NL Webmaster Tools](https://www.ranks.nl/stopwords).
+-   I used a stopwords list for English language available at [Ranks NL Webmaster Tools](https://www.ranks.nl/stopwords).
 
 After we processes the files, COWO we will use another software [Vosviewer](http://www.vosviewer.com) as a *passage* to Gephi.
 
@@ -60,16 +60,16 @@ Here are the instructions:
 
 -   Open VosViewer
 
--   In the actio" tab, click on create
+-   In the action tab, click on create
 
 -   Choose "create a map based on a network"
 
-    -   Select the \*.map file COWO jsut created
-    -   Select the network file COWO jsut created
+    -   Select the \*.map file COWO just created
+    -   Select the network file COWO just created
 
 -   Click next until the network show up.
 
-[Vosviewer](http://www.vosviewer.com) is a nice programme, but the options are not so good as they are in [Gephi](https://gephi.org/). This is the reseaon why we export the file as a **GraphML** or **GML** format to open it in Gephi.
+[Vosviewer](http://www.vosviewer.com) is a nice programme, but the options are not so good as they are in [Gephi](https://gephi.org/). This is the reason why we export the file as a **GraphML** or **GML** format to open it in Gephi.
 
 After you exported the files, start Gephi. Click on open graph file (see image below) and open the network.
 
@@ -82,7 +82,7 @@ After you exported the files, start Gephi. Click on open graph file (see image b
 After you open the file, perform the following calculations (see image above):
 
 -   Modularity Class
--   Avarege Degree
+-   Average Degree
 
 Then apply the following size and colour configuration - Size -\> ranking -\> degree and apply size 21 - 50 to the size of the nodes - Colour -\> Partition, modularity class.
 
@@ -100,8 +100,8 @@ Finally, go to the preview tab, mark show labels and preview the network. It mig
 
 </p>
 
-Please, note that the Key (legend) was added using Adboe Illustrator. Each colour would represent a cluster, the more centred words are more important in terms of co-occurence.
+Please, note that the Key (legend) was added using Adobe Illustrator. Each colour would represent a cluster, the more centred words are more important in terms of co-occurrence.
 
-# Semi-automatic tagging
+# Semi-automatic tagging and multidimensional analysis
 
 The next step was to tag the corpus in order to enable factor analysis. Three R packages we used for this task:
