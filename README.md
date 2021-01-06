@@ -96,6 +96,12 @@ Finally, go to the preview tab, mark show labels and preview the network. It mig
 
 Please, note that the Key (legend) was added using Adboe Illustrator. Each colour would represent a cluster, the more centred words are more important in terms of co-occurence. 
 
+# Semi-automatic tagging
+
+The next step was to tag the corpus in order to enable factor analysis. Three R packages we used for this task: 
+
+
+
 
 
 
