@@ -2,15 +2,17 @@
 
 [Rodrigo Esteves de Lima-Lopes](mailto:rll307@unicamp.br) (State University of Campinas)
 
-This scripts bring the methodological steps for my paper: "Immigration and the context of Brexit: Collocate Network and Multidimensional Frameworks applied to Appraisal in SFL"
+This scripts bring the methodological steps for my paper:
 
-The paper is still in peer-review processes and the reference will be posted here soon as it is published. Unfortunately, due to the ethical issues, data cannot be provided in this repository.
+Lima-Lopes, Rodrigo Esteves de. 2020. ‘Immigration and the Context of  Brexit: Collocate network and Multidimensional Frameworks Applied to Appraisal in SFL’. *Muitas Vozes* **9** (1): 410–41. [https://doi.org/10.5212/MuitasVozes.v.9i1.0024](https://doi.org/10.5212/MuitasVozes.v.9i1.0024)
+
+The article is in a open science journal, just follow the [link](https://doi.org/10.5212/MuitasVozes.v.9i1.0024)
 
 Please, drop me a line if any doubt pops up.
 
 # Thank you note
 
-I would like to express my gratitude to 1) Cardiff University (Wales-UK) and CNPq (Brazilian National Council for Scientific and Technological Development) for financing this research and 2) to Dr Lise Fontaine for supporting this project.
+I would like to express my gratitude to Cardiff University (Wales-UK) and CNPq (Brazilian National Council for Scientific and Technological Development) for financing this research and 2) to Dr Lise Fontaine for supporting this project.
 
 # Methods
 
