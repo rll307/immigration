@@ -12,7 +12,7 @@ Please, drop me a line if any doubt pops up.
 
 # Thank you note
 
-I would like to express my gratitude to Cardiff University (Wales-UK) and CNPq (Brazilian National Council for Scientific and Technological Development) for financing this research and 2) to Dr Lise Fontaine for supporting this project.
+I would like to express my gratitude to Cardiff University (Wales-UK) and CNPq (Brazilian National Council for Scientific and Technological Development) for financing this research and to Dr Lise Fontaine for supporting this project.
 
 # Methods
 
